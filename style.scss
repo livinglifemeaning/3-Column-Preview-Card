@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+$card1: hsl(31, 77%, 52%); 
+$card2: hsl(184, 100%, 22%); 
+$card3: hsl(179, 100%, 13%); 
+$paragraph: hsla(0, 0%, 100%, 0.75); 
+$bg: hsl(0, 0%, 95%); 
+$radius: 10px; 
+
+*{
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bg; 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container{
+    display: flex; 
+    width: 850px; 
+    height: 500px; 
+
+    @media (max-width: 955px){
+    width: 350px; 
+    height: 1300px; 
+    flex-direction: column; 
+    margin-top: 5rem; 
+    margin-bottom: 5rem; 
+    }
+    
+}
+.content{
+    @media (max-width: 955px){
+    width: 70%; 
+    height: 80%; 
+    }
+    width: 75%; 
+    height: 80%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.card{
+    width: 100%;
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.card.one{
+    background-color: $card1;
+    @media(min-width: 956px){
+    border-top-left-radius: $radius; 
+    border-bottom-left-radius: $radius; 
+    }
+    @media (max-width: 955px){
+    border-top-left-radius: $radius; 
+    border-top-right-radius: $radius; 
+    }
+    .btn{
+        color: $card1; 
+        &:hover{
+            color: $bg; 
+        }
+    }
+}
+
+.card.two{
+    background-color: $card2; 
+    
+    .btn{
+        color: $card2; 
+        &:hover{
+            color: $bg; 
+        }
+    }
+}
+
+.card.three{
+    background-color: $card3; 
+
+    @media(min-width: 956px){
+    border-bottom-right-radius: $radius; 
+    border-top-right-radius: $radius; 
+    }
+    @media (max-width: 955px){
+    border-bottom-left-radius: $radius; 
+    border-bottom-right-radius: $radius; 
+    }
+
+    .btn{
+        color: $card3; 
+        &:hover{
+            color: $bg; 
+        }
+    }
+}
+
+h2{
+    font-family: "Big Shoulders Display", sans-serif; 
+    text-transform: uppercase; 
+    color: $bg; 
+    font-size: 3rem; 
+}
+
+.desc{
+    font-family: "Lexend Deca", sans-serif; 
+    color: $paragraph; 
+    font-size: 16px; 
+    line-height: 25px; 
+    width: 215px; 
+    @media (max-width: 955px){
+    width: 245px; 
+    }
+}
+
+.btn{
+
+    @media (min-width: 956px){
+        margin-top: 2rem; 
+    }
+    background-color: $bg; 
+    width: 150px; 
+    font-family: "Lexend Deca", sans-serif;
+    border-radius: 50px; 
+    padding: 0.8rem; 
+    font-size: 1rem; 
+    text-align: center; 
+    border: solid 2px $bg; 
+
+    &:hover{
+        background-color: transparent; 
+        cursor: pointer; 
+    }
+}
